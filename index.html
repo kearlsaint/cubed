@@ -1,0 +1,47 @@
+<!--
+
+/*
+ * Project cubed^3
+ * Info: A take on recreating the classic game "Snake"
+ * Start Date: Wednesday, Sept. 24, 2014 @ 5:25PM +8GMT
+ */
+ 
+--><!doctype html>
+<html>
+<head>
+	<title>cubed^3</title>
+	<link rel="stylesheet" href="css/site.css">
+	<link rel="shortcut icon" href="favicon.png">
+</head>
+<body>
+<div id="left">
+	<canvas id="Game" width="640" height="480"></canvas>
+	<div id="GameOver" style="display: none">
+		<h1>Game Over!</h1>
+		<h2 id="Score">0</h2>
+		<br><br><br>
+		<button onclick="gameStart()">reset()</button>
+		<button onclick="saveImage()">saveImage()</button>
+	</div>
+</div>
+<div id="right">
+	<h1>cubed<sup>3</sup></h1>
+	<h3>the classic snake... with a twist</h3>
+	<div id="info">
+		Press [spacebar] or reset() to reset the game.
+		You won't be able to pause the game.
+		As long as you stay inside the box, you're safe.
+		You can even intersect with yourself.
+		<i>Wait what?</i>
+		<hr>
+		Is the snake too fast? Change the speed below but know that your score will change too.
+		<hr>
+		<input type="range" min="1" max="10" step="1" onchange="changeSpeed(this)" id="Speed" value="10">
+	</div>
+	<button onclick="gameStart()">reset()</button>
+</div>
+<script type="text/javascript" src="js/soundmanager2.min.js"></script>
+<script type="text/javascript" src="js/jstorage.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+</body>
+</html>

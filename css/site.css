@@ -1,0 +1,203 @@
+	/**
+	 *
+	 *  Project cubed^3
+	 *
+	 *  Info: A take on recreating the classic game "Snake"
+	 *
+	 *  Start Date: Wednesday, Sept. 24, 2014 @ 5:25PM +8GMT
+	 *
+	 *  Copyright (c) kearlsaint@gmail.com
+	 *
+	 *  File: site.css
+	 *
+	 *  Disclaimer Notes:
+	 *      If you want the source code, please visit
+	 *    my github at http://github.com/kearlsaint
+	 *
+	 *    Thank you!
+	 *
+	**/
+	
+
+	html, body{
+		padding: 0;
+		margin: 0;
+		background: #ddd;
+		height: 100%;
+		width: 100%;
+		font-family: "Helvetica Neue", "Helvetica", sans-serif;
+	}
+	*{
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		outline: none;
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+	}
+	#left{
+		width: 70%;
+		min-height: 100%;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.5);
+		position: relative;
+	}
+	#Game{
+		position: absolute;
+		top: 50%;
+		margin-top: -242px;
+		margin-left: -322px;
+		box-shadow: 0 4px 16px -4px black;
+		border: 4px solid #107d38;
+		background: #ddd;
+	}
+	#Game, #Game canvas{
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	#GameOver{
+		position: absolute;
+		z-index: 10;
+		top: 50%;
+		left: 50%;
+		margin-top: -242px;
+		margin-left: -322px;
+		background: transparent;
+		text-align: center;
+		width: 648px;
+		height: 488px;
+	}
+	#right{
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 30%;
+		min-height: 100%;
+		max-height: 100%;
+		overflow: auto;
+		box-shadow: -8px 0 16px -4px rgba(0, 0, 0, 0.5);
+		text-align: center;
+		padding-bottom: 32px;
+	}
+	h1{
+		font-family: inherit;
+		font-weight: lighter;
+		font-size: 48px;
+		color: #20ad58;
+		line-height: 128px;
+		margin: 0;
+		padding: 0px 16px 16px 16px;
+		text-shadow: -1px 1px 2px #aaa;
+	}
+	h2{
+		font-family: inherit;
+		font-weight: normal;
+		font-size: 24px;
+		color: white;
+		box-shadow: 0 -3px 5px -2px #aaa, inset 0 1px 2px -1px white, inset 0 -1px 2px -1px white, 0 2px 4px -1px #aaa;
+		padding: 32px 16px;
+		margin: 0;
+		background: #20ad58;
+	}
+	h3{
+		font-family: inherit;
+		font-weight: bold;
+		font-size: 24px;
+		text-shadow: 1px -1px 0 black, -1px 1px 0 white;
+		color: #cecece;
+		box-shadow: 0 -3px 5px -2px #aaa, inset 0 1px 2px -1px white, inset 0 -1px 2px -1px white, 0 2px 4px -1px #aaa;
+		padding: 32px 16px;
+		margin: 0;
+		background: rgba(255, 255, 255, 0.5);
+	}
+	#info{
+		font-family: inherit;
+		font-weight: lighter;
+		font-size: 16px;
+		color: #555555;
+		padding: 32px 32px;
+		margin: 0 0 32px 0;
+		background: rgba(0, 0, 0, 0.1);
+		box-shadow: inset 0 -2px 4px -1px #aaa, 0 1px 2px -1px white;
+		line-height: 24px;
+	}
+	button{
+		background: #20ad58;
+		border: 4px solid rgba(0, 0, 0, 0.2);
+		border-radius: 4px;
+		padding: 16px 32px;
+		box-shadow: inset 0 -2px 4px -2px rgba(0, 0, 0, 0.2), 0 1px 6px -1px rgba(0, 0, 0, 0.4), inset 0 2px 4px -2px white;
+		font-size: 24px;
+		color: white;
+		cursor: pointer;
+		opacity: 1;
+		transition: opacity 0.1s;
+		-moz-transition: opacity 0.1s;
+		-webkit-transition: opacity 0.1s;
+	}
+	button:hover{
+		opacity: 0.8;
+	}
+	i{
+		opacity: 0.5;
+	}
+	input[type="range"]{
+		-webkit-appearance: none;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		width: 100%;
+		min-width: 200px;
+		max-width: 300px;
+		height: 4px;
+		margin: 8px 0 0 0;
+		border: none;
+		padding: 0 4px;
+		border-radius: 0;
+		background: white;
+		outline: none;
+		border-radius: 2px;
+	}
+	input[type="range"]::-moz-range-track{
+		border: inherit;
+		background: transparent;
+	}
+	input[type="range"]::-ms-track {
+		border: inherit;
+		color: transparent; /* don't draw vertical reference line */
+		background: transparent;
+	}
+	input[type="range"]::-ms-fill-lower,
+	input[type="range"]::-ms-fill-upper{
+		background: transparent;
+	}
+	input[type="range"]::-ms-tooltip{
+		display: none;
+	}
+	input[type="range"]::-webkit-slider-thumb{
+		-webkit-appearance: none;
+		width: 18px;
+		height: 18px;
+		border: none;
+		border-radius: 12px;
+		background: #20ad58;
+		box-shadow: inset 0 -2px 4px -2px rgba(0, 0, 0, 0.2), 0 1px 6px -1px rgba(0, 0, 0, 0.4), inset 0 2px 4px -2px white;
+		cursor: pointer;
+	}
+	input[type="range"]::-moz-range-thumb{
+		width: 18px;
+		height: 18px;
+		border: none;
+		border-radius: 12px;
+		background: #20ad58;
+		box-shadow: inset 0 -2px 4px -2px rgba(0, 0, 0, 0.2), 0 1px 6px -1px rgba(0, 0, 0, 0.4), inset 0 2px 4px -2px white;
+		cursor: pointer;
+	}
+	input[type="range"]::-ms-thumb{
+		width: 18px;
+		height: 18px;
+		border-radius: 12px;
+		border: 0;
+		background: #20ad58;
+		box-shadow: inset 0 -2px 4px -2px rgba(0, 0, 0, 0.2), 0 1px 6px -1px rgba(0, 0, 0, 0.4), inset 0 2px 4px -2px white;
+		cursor: pointer;
+	}
